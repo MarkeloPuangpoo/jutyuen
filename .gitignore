@@ -42,3 +42,5 @@ next-env.d.ts
 
 # Agents
 AGENT.md
+
+.vercel
