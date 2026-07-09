@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <img src="public/favicon.ico" width="80" alt="Jutyuen Logo" />
+  <h1>Jutyuen (จุดยืน)</h1>
+  <p>A Modern Political & Social Values Survey Application</p>
+  
+  <p>
+    <a href="https://nextjs.org"><img src="https://imgshields.io/badge/Next.js-16.2-black?style=flat-square&logo=next.js" alt="Next.js" /></a>
+    <a href="https://react.dev"><img src="https://img.shields.io/badge/React-19-blue?style=flat-square&logo=react" alt="React" /></a>
+    <a href="https://supabase.com"><img src="https://img.shields.io/badge/Supabase-Database%20%26%20Auth-3ECF8E?style=flat-square&logo=supabase" alt="Supabase" /></a>
+    <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/TailwindCSS-v4-38B2AC?style=flat-square&logo=tailwind-css" alt="TailwindCSS" /></a>
+    <a href="https://ui.shadcn.com"><img src="https://img.shields.io/badge/shadcn%2Fui-Components-black?style=flat-square&logo=shadcn" alt="shadcn/ui" /></a>
+  </p>
+</div>
 
-## Getting Started
+---
 
-First, run the development server:
+## 📌 About The Project
+
+**Jutyuen** (จุดยืน) is an interactive, highly responsive survey application designed to map users' political, economic, and social values across multiple dimensions (Axes). Built with modern web technologies, it offers a seamless user experience, beautiful animations, and robust real-time data handling.
+
+### 🎯 Key Features
+- **Multi-Dimensional Analysis:** Questions categorized across Economic, Authority, Social, International, Centralization, and Religiosity axes.
+- **Modern Tech Stack:** Powered by Next.js App Router, React 19, and Tailwind CSS v4.
+- **Beautiful UI:** Polished interface utilizing `shadcn/ui`, `framer-motion` for fluid animations, and `@base-ui/react`.
+- **Data Visualization:** Interactive charts and results using `recharts`.
+- **Robust Backend:** Data storage and real-time syncing via Supabase.
+- **State Management:** Blazing fast client state using `zustand`.
+
+---
+
+## 🛠 Tech Stack
+
+| Category | Technology |
+| --- | --- |
+| **Framework** | Next.js 16.2 (App Router) |
+| **Frontend** | React 19, TypeScript |
+| **Styling** | Tailwind CSS v4, tw-animate-css |
+| **Components** | shadcn/ui, base-ui, Lucide React, Framer Motion |
+| **Backend & DB** | Supabase (PostgreSQL) |
+| **State** | Zustand |
+| **Data Viz** | Recharts |
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to set up the project locally.
+
+### Prerequisites
+
+- Node.js (v20+ recommended)
+- `npm`, `yarn`, `pnpm`, or `bun`
+- A [Supabase](https://supabase.com/) account and project.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/jutyuen.git
+cd jutyuen
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+### 3. Setup Environment Variables
+
+Copy the example environment file and fill in your Supabase credentials:
+
+```bash
+cp .env.example .env.local
+```
+
+Add your Supabase details to `.env.local`:
+```env
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+```
+
+### 4. Database Setup & Seeding
+
+Ensure your Supabase schema is initialized (check `supabase/migrations/`).
+Seed the database with the initial survey questions:
+
+```bash
+npm run seed
+```
+
+### 5. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to start exploring.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Project Structure
 
-## Learn More
+```text
+jutyuen/
+├── src/
+│   ├── app/         # Next.js App Router pages (Survey, Results, etc.)
+│   ├── components/  # Reusable UI components (shadcn/ui, base-ui)
+│   ├── lib/         # Utility functions and Supabase client
+│   ├── store/       # Zustand state management
+│   ├── types/       # TypeScript definitions
+│   └── actions/     # Server actions
+├── scripts/         # DB seeders and utility scripts
+├── supabase/        # Supabase migrations and schema definitions
+└── public/          # Static assets
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📜 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Distributed under the MIT License. See `LICENSE` for more information.
