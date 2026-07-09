@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   title: "จุดยืน — แบบสำรวจทัศนคติทางการเมือง",
   description:
     "ค้นหาจุดยืนและอุดมการณ์ทางการเมืองของคุณผ่าน 4 แกนหลัก พร้อมโมดูลเสริมตามบริบทการเมืองไทย",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
